@@ -1,9 +1,15 @@
-import './App.css'
+import { useState } from 'react';
+import TodoInput from './components/TodoInput';
+import TodoList from './components/TodoList';
 
 function App() {
+  const [todos, setTodos] = useState([]);
+
   return (
-    <div>
-      <h1>My First React To-Do App</h1>
+    <div style={{ padding: '20px' }}>
+      <h1>My To-Do App</h1>
+      <TodoInput />
+      <TodoList todos={todos} />
     </div>
   );
 }
